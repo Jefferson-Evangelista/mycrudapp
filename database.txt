@@ -1,0 +1,16 @@
+CREATE TABLE clients (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR (100) NOT NULL,
+    email VARCHAR (200) NOT NULL UNIQUE,
+    phone VARCHAR(20) NULL,
+    address VARCHAR(200) NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO clients (name, email, phone, address)
+VALUES
+('Coco Martin', 'coco.martin@abscbn.com', '09111223344', 'Makati City, NCR'),
+('Pedro Penduko', 'pedropenduko@gmail.com', '09123456441', 'Tawi-tawi, Mindanao'),
+('Jose Rizal', 'joserizal@gmail.com', '09711168999', 'Calamba, Laguna'),
+('Ninong Ry', 'ninongry@gmail.com', '09092211441', 'Mandaue, Cebu');
